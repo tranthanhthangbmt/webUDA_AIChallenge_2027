@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khung Tiêu Chí Chấm Điểm - UDA AI Challenge 2027</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .doc-container {
+            max-width: 900px;
+            margin: 120px auto 50px auto;
+            padding: 50px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+        }
+        .doc-container h1, .doc-container h2, .doc-container h3 {
+            color: var(--primary);
+            margin-top: 1.5em;
+            margin-bottom: 0.8em;
+        }
+        .doc-container h1 { font-size: 2rem; text-align: center; margin-top: 0; margin-bottom: 30px; border-bottom: 2px solid var(--primary-light); padding-bottom: 20px;}
+        .doc-container p { margin-bottom: 1.2em; font-size: 1.05rem; }
+        .doc-container ul, .doc-container ol { margin-bottom: 1.2em; padding-left: 24px; font-size: 1.05rem; }
+        .doc-container li { margin-bottom: 0.5em; }
+        .doc-container table { width: 100%; border-collapse: collapse; margin-bottom: 1.5em; }
+        .doc-container th, .doc-container td { border: 1px solid var(--border-color); padding: 12px; text-align: left; }
+        .doc-container th { background: var(--bg-light); font-weight: 600; }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 30px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        .back-btn:hover { transform: translateX(-5px); }
+        .doc-title { text-align: center; color: var(--text-main); margin-bottom: 40px; font-size: 2.2rem; }
+    </style>
+</head>
+<body class="bg-light">
+    <header class="navbar scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">UDA AI <span>Challenge</span></a>
+            <nav class="nav-links">
+                <a href="index.html#about">Về Cuộc thi</a>
+                <a href="index.html#tech">Công Nghệ</a>
+                <a href="index.html#tracks">Phân Ban</a>
+                <a href="index.html#roadmap">Lộ Trình</a>
+                <a href="index.html#documents" class="active">Tài Liệu</a>
+                <a href="index.html#register" class="btn btn-primary">Đăng Ký</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="doc-container">
+            <a href="index.html#documents" class="back-btn">&larr; Quay lại trang chủ</a>
+            <h1 class="doc-title">Khung Tiêu Chí Chấm Điểm</h1>
+            <div class="doc-content">
+                <p><a id="tổ-chức-cuộc-thi-ai-tây-nguyên"></a><a id="gemini-5"></a><strong>PHỤ LỤC: KHUNG TIÊU CHÍ CHẤM ĐIỂM (RUBRIC)</strong></p><p><em>(Đính kèm Kế hoạch tổ chức Cuộc thi AI Innovation Challenge 2026)</em></p><p><strong>HƯỚNG DẪN DÀNH CHO HỘI ĐỒNG GIÁM KHẢO</strong> Bảng tiêu chí này được thiết kế để đánh giá năng lực “Kiến trúc hệ thống” của sinh viên thông qua việc lắp ráp 04 nền tảng: NotebookLM (Dữ liệu), Gemini (Nhận thức), n8n (Tự động hóa) và Antigravity (Giao diện). Giám khảo đánh giá dựa trên sự trơn tru của toàn bộ dây chuyền thay vì độ phức tạp của mã nguồn.</p><h3><a id="X2a42fe684fc5e2d8e37ad615933ae51960cb8da"></a><strong>TIÊU CHÍ 1: TÍNH KỶ LUẬT VÀ AN TOÀN HỆ THỐNG (TẦNG LÕI) – TỐI ĐA 25 ĐIỂM</strong></h3><p><strong>Trọng tâm đánh giá:</strong> Khả năng thiết lập “Mỏ neo dữ liệu” trên NotebookLM và bản System Instructions (Khung 6 trụ cột) trên Gemini để chống ảo giác (Hallucination).</p><ul><li><strong>Mức Xuất sắc (21 - 25 điểm): Zero-Hallucination &amp; Lập luận chặt chẽ</strong><ul><li>Bản System Instructions được thiết kế cực kỳ chặt chẽ, phân tách rõ các thẻ XML chỉ định (ví dụ: &lt;thinking_process&gt;, &lt;constraints&gt;).</li><li>Tác nhân AI tuyệt đối tuân thủ nguồn dữ liệu từ NotebookLM. Có khả năng định lượng niềm tin (Confidence Calibration) – biết chủ động DỪNG LẠI và từ chối trả lời nếu câu hỏi của người dùng nằm ngoài vùng dữ liệu cho phép.</li><li>Không xảy ra hiện tượng “thoát vai” (Role drift) trong suốt quá trình test.</li></ul></li><li><strong>Mức Khá/Tốt (15 - 20 điểm): An toàn cơ bản nhưng thiếu chiều sâu</strong><ul><li>System Instructions có đủ các trụ cột cơ bản nhưng chưa thiết lập được các lệnh cấm (Negative Constraints) đủ mạnh.</li><li>AI bám sát dữ liệu NotebookLM nhưng thỉnh thoảng phản hồi còn rập khuôn, thụ động hoặc chưa biết cách đặt câu hỏi ngược lại để khai thác thêm thông tin từ người dùng.</li></ul></li><li><strong>Mức Cần cải thiện (Dưới 15 điểm): Mất kiểm soát &amp; Ảo giác</strong><ul><li>Sinh viên dùng prompt hời hợt (kiểu Zero-shot).</li><li>AI có biểu hiện “bịa đặt” thông tin pháp lý/nghiệp vụ, tự ý nội suy kiến thức từ dữ liệu huấn luyện bên ngoài thay vì dùng dữ liệu địa phương được cung cấp.</li></ul></li></ul><h3><a id="X1d8c23b052b0b541099bcac03d505d1764c669f"></a><strong>TIÊU CHÍ 2: MỨC ĐỘ TỰ ĐỘNG HÓA &amp; GIẢI QUYẾT VẤN ĐỀ (TẦNG VẬN HÀNH) – TỐI ĐA 25 ĐIỂM</strong></h3><p><strong>Trọng tâm đánh giá:</strong> Khả năng ứng dụng n8n để xây dựng luồng truyền tải dữ liệu (Workflow) liên kết giữa AI và các phần mềm ứng dụng thực tế, giải quyết trúng “nỗi đau” của người dùng.</p><ul><li><strong>Mức Xuất sắc (21 - 25 điểm): Tự động hóa toàn trình (End-to-End) &amp; Xử lý ngoại lệ tốt</strong><ul><li>Giải quyết xuất sắc một bài toán thực tiễn của Đắk Lắk (Nông nghiệp, Du lịch, Hành chính).</li><li>Luồng n8n được thiết kế logic, không có “nút thắt cổ chai” về dữ liệu. Các nút mạng (nodes) gọi API (đến Zalo, Telegram, Gmail, Sheets) phản hồi nhanh chóng, ổn định.</li><li>Đặc biệt: Có thiết lập “Giao thức xử lý ngoại lệ” (Exception Handling) trên n8n. Nếu API của Gemini bị lỗi hoặc người dùng nhập sai định dạng, luồng không bị sập mà tự động trả về thông báo lỗi thân thiện.</li></ul></li><li><strong>Mức Khá/Tốt (15 - 20 điểm): Hoạt động cơ bản nhưng quy trình còn đứt gãy</strong><ul><li>Giải pháp có ý nghĩa thực tiễn nhưng luồng n8n thiết kế còn cồng kềnh.</li><li>Hệ thống chạy được chức năng chính nhưng đôi khi cần sự kích hoạt thủ công (Manual Trigger) ở một số bước, tốc độ luân chuyển dữ liệu giữa các API còn độ trễ cao.</li></ul></li><li><strong>Mức Cần cải thiện (Dưới 15 điểm): Lỗi luồng dữ liệu</strong><ul><li>Luồng n8n thường xuyên báo lỗi đứt gãy kết nối mạng hoặc sai định dạng dữ liệu (JSON parsing errors). Hệ thống chưa thể hoàn thành một chu trình tác vụ nghiệp vụ trọn vẹn.</li></ul></li></ul><h3><a id="X50fd575e4b7cea32190278b44b2a9beae9635a3"></a><strong>TIÊU CHÍ 3: ĐỔI MỚI SÁNG TẠO &amp; TRẢI NGHIỆM NGƯỜI DÙNG (TẦNG GIAO DIỆN) – TỐI ĐA 20 ĐIỂM</strong></h3><p><strong>Trọng tâm đánh giá:</strong> Kỹ năng sử dụng ngôn ngữ tự nhiên để ra lệnh cho Antigravity sinh mã nguồn, đóng gói Tác nhân AI thành một phần mềm Web/App thân thiện với người dùng cuối.</p><ul><li><strong>Mức Xuất sắc (16 - 20 điểm): Ứng dụng thương mại hóa cao</strong><ul><li>Sử dụng Antigravity tạo ra một UI (Giao diện người dùng) cực kỳ trực quan, thẩm mỹ.</li><li>Che giấu hoàn toàn được sự phức tạp của kỹ thuật (Prompt, API) bên dưới. Người dùng cuối chỉ thấy các nút bấm, biểu mẫu (form) nhập liệu hoặc khung chat đơn giản.</li><li>Có sự đổi mới sáng tạo trong cách người dùng tương tác với AI (ví dụ: dùng biểu mẫu kết hợp tải ảnh lên thay vì chỉ bắt người dùng gõ chữ mô tả).</li></ul></li><li><strong>Mức Khá/Tốt (10 - 15 điểm): Giao diện chức năng</strong><ul><li>Giao diện được Antigravity tạo ra đáp ứng được các chức năng nhập/xuất dữ liệu cơ bản nhưng thiết kế UI/UX còn thô sơ, chưa được tối ưu hóa cho màn hình di động (Responsive).</li></ul></li><li><strong>Mức Cần cải thiện (Dưới 10 điểm): Giao diện lỗi hoặc chưa đóng gói</strong><ul><li>Chỉ trình diễn được trên môi trường test của IDE hoặc màn hình console.</li><li>Giao diện do Antigravity sinh ra bị vỡ bố cục, hoặc làm lộ các đoạn mã thô (raw JSON) ra màn hình của người dùng.</li></ul></li></ul><p><a id="gemini-6"></a></p><h3><a id="Xa9bd63b69c80b52f12af39a33c3da88f8ae72b9"></a><strong>TIÊU CHÍ 4: TÁC ĐỘNG CỘNG ĐỒNG &amp; TIỀM NĂNG THƯƠNG MẠI – TỐI ĐA 15 ĐIỂM</strong></h3><p><strong>Trọng tâm đánh giá:</strong> Tính khả thi khi triển khai tại khu vực Tây Nguyên (Đắk Lắk), mô hình vận hành rõ ràng và khả năng nhân rộng của dự án.</p><ul><li><strong>Mức Xuất sắc (13 - 15 điểm): Giải pháp sắc bén &amp; Dễ dàng nhân rộng</strong><ul><li>Slide Pitch Deck trình bày bức tranh chân dung người dùng mục tiêu cực kỳ sắc nét. Nêu bật được việc sử dụng AI giúp tiết kiệm bao nhiêu thời gian, chi phí cho doanh nghiệp/cơ quan hành chính.</li><li>Bài toán gắn liền mật thiết với đặc thù Tây Nguyên (ví dụ: chuỗi cung ứng sầu riêng/cà phê, du lịch văn hóa cồng chiêng, thủ tục hành chính cấp xã).</li><li>Tiềm năng nhân rộng (Scalability) cao: Kiến trúc n8n và Antigravity được thiết kế theo dạng module, dễ dàng sao chép/mở rộng kịch bản để bán cho các doanh nghiệp hoặc địa phương khác mà không cần đập đi xây lại.</li></ul></li><li><strong>Mức Khá/Tốt (9 - 12 điểm): Giải pháp an toàn, mô hình kinh doanh cơ bản</strong><ul><li>Đề tài có ý nghĩa thiết thực nhưng đối tượng người dùng mục tiêu còn hơi rộng, thiếu tập trung.</li><li>Đã phác thảo được lợi ích của sản phẩm nhưng chưa định lượng được giá trị kinh tế hoặc thời gian tiết kiệm cụ thể.</li></ul></li><li><strong>Mức Cần cải thiện (Dưới 9 điểm): Thiếu thực tế</strong><ul><li>Giải pháp mang tính “có giải pháp đi tìm bài toán” (tạo ra AI nhưng không giải quyết nỗi đau thực tế nào). Tính ứng dụng thương mại thấp hoặc không khả thi trong môi trường hiện tại của địa phương.</li></ul></li></ul><h3><a id="X8c9d2434673faee160ad243648bd735fef60978"></a><strong>TIÊU CHÍ 5: KỸ NĂNG PITCHING &amp; PHÒNG VỆ RED-TEAMING – TỐI ĐA 15 ĐIỂM</strong></h3><p><strong>Trọng tâm đánh giá:</strong> Kỹ năng thuyết trình liên ngành và bản lĩnh bảo vệ tính kỷ luật của hệ thống trước các “bẫy logic” từ Hội đồng Giám khảo.</p><ul><li><strong>Mức Xuất sắc (13 - 15 điểm): Thuyết trình lôi cuốn &amp; Phòng vệ xuất sắc (Zero-Hallucination)</strong><ul><li><strong>Pitching:</strong> Trình bày ngắn gọn, truyền cảm hứng, làm nổi bật được giá trị lõi. Thể hiện rõ sự phối hợp nhịp nhàng của một đội liên ngành (người lo nghiệp vụ, người lo luồng kỹ thuật). Quản lý thời gian hoàn hảo.</li><li><strong>Red-Teaming:</strong> Khi Giám khảo cố tình nhập một câu hỏi chứa “thông tin mâu thuẫn” hoặc “đòi hỏi phi lý/sai pháp luật” vào ứng dụng Antigravity, Tác nhân AI lập tức DỪNG LẠI. Hệ thống tự động từ chối thực thi, hiển thị cảnh báo rủi ro qua luồng n8n và kiên quyết yêu cầu người dùng cung cấp dữ kiện đúng. Sinh viên giải thích mạch lạc cơ chế phòng vệ này dựa trên Bản System Instructions đã thiết lập.</li></ul></li><li><strong>Mức Khá/Tốt (9 - 12 điểm): Pitching tốt, Phòng vệ đôi chỗ lúng túng</strong><ul><li><strong>Pitching:</strong> Trình bày rõ ràng, dễ hiểu nhưng chưa tạo được sự lôi cuốn mạnh mẽ hoặc phân bổ thời gian chưa đều giữa các thành viên.</li><li><strong>Red-Teaming:</strong> AI có khả năng từ chối các yêu cầu sai trái cơ bản, nhưng khi Giám khảo đưa ra các “bẫy” tinh vi hơn (đòi hỏi xử lý đa bước phức tạp), hệ thống có dấu hiệu bối rối, luồng n8n báo lỗi thô (chưa bọc lỗi thân thiện) hoặc sinh viên lúng túng khi giải thích nguyên nhân.</li></ul></li><li><strong>Mức Cần cải thiện (Dưới 9 điểm): Bị bẻ gãy logic &amp; Mất kiểm soát</strong><ul><li><strong>Pitching:</strong> Trình bày lan man, phụ thuộc quá nhiều vào tài liệu đọc sẵn.</li><li><strong>Red-Teaming:</strong> Thất bại hoàn toàn trước các bẫy kiểm thử. AI ngoan ngoãn “bịa đặt” ra một quyết định ảo giác (Hallucination) để làm hài lòng Giám khảo thay vì từ chối. Sinh viên không nắm rõ cấu trúc luồng của chính mình để khắc phục sự cố.</li></ul></li></ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2027 UDA AI Innovation Challenge.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

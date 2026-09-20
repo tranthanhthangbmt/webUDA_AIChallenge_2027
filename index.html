@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UDA AI Innovation Challenge 2027</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">UDA AI <span>Challenge</span></a>
+      <nav class="nav-links">
+        <a href="#about">Về Cuộc thi</a>
+        <a href="#tech">Công Nghệ</a>
+        <a href="#tracks">Phân Ban</a>
+        <a href="#roadmap">Lộ Trình</a>
+        <a href="#documents">Tài Liệu</a>
+        <a href="#register" class="btn btn-primary">Đăng Ký</a>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <div class="badge fade-in-up">Sự kiện công nghệ thường niên 2027</div>
+        <h1 class="fade-in-up delay-1">AI Innovation <br><span class="highlight">Challenge</span> 2027</h1>
+        <p class="fade-in-up delay-2">Kiến tạo Tác nhân AI giải quyết bài toán địa phương. Sân chơi thực chiến dành riêng cho sinh viên khối ngành Kinh tế, Ngôn ngữ, Du lịch, Điều dưỡng tại Đại học Đông Á - Phân hiệu Đắk Lắk.</p>
+        <div class="hero-actions fade-in-up delay-3">
+          <a href="#register" class="btn btn-primary btn-large">Tham gia ngay</a>
+          <a href="#roadmap" class="btn btn-secondary btn-large">Xem Lộ trình</a>
+        </div>
+      </div>
+      <div class="hero-visual fade-in-up delay-4">
+        <div class="glass-card mockup-card">
+          <div class="mockup-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <div class="mockup-body">
+            <h3>Kiến Trúc AI Toàn Trình</h3>
+            <ul class="tech-stack-list">
+              <li><div class="icon-box blue">🧠</div> <div class="item-info"><strong>NotebookLM</strong><span>Neo dữ liệu, chống ảo giác</span></div></li>
+              <li><div class="icon-box orange">⚡</div> <div class="item-info"><strong>Gemini Engine</strong><span>Xử lý logic 6 trụ cột</span></div></li>
+              <li><div class="icon-box teal">⚙️</div> <div class="item-info"><strong>n8n Workflows</strong><span>Tự động hóa luồng API</span></div></li>
+              <li><div class="icon-box purple">✨</div> <div class="item-info"><strong>Antigravity</strong><span>Sinh giao diện Web/App</span></div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about section-padding" id="about">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Về Cuộc Thi</h2>
+        <p>Nâng cao năng lực số và kỹ năng thực chiến bằng cách ứng dụng AI tạo sinh vào thực tiễn.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-card reveal">
+          <div class="card-icon bg-blue-light text-blue">🚀</div>
+          <h3>Thực Chiến 100%</h3>
+          <p>Xây dựng AI Agent có khả năng vận hành thực tế thông qua các luồng tự động hóa, giải quyết vấn đề bằng công nghệ No-Code/Low-Code.</p>
+        </div>
+        <div class="about-card reveal delay-1">
+          <div class="card-icon bg-orange-light text-orange">🛡️</div>
+          <h3>An Toàn & Kiểm Soát</h3>
+          <p>Tuân thủ nguyên tắc kiểm soát của con người (Human-in-the-loop). Đánh giá khắt khe khả năng phòng vệ lỗi qua thử thách Red-Teaming.</p>
+        </div>
+        <div class="about-card reveal delay-2">
+          <div class="card-icon bg-teal-light text-teal">🌍</div>
+          <h3>Giải Pháp Tây Nguyên</h3>
+          <p>Nghiên cứu và số hóa các bài toán đặc thù của cộng đồng, nông nghiệp, du lịch và an sinh xã hội tại khu vực Tây Nguyên.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack Section -->
+  <section class="tech-stack section-padding bg-light" id="tech">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Kiến Trúc 4 Tầng</h2>
+        <p>Sử dụng Master Templates để lắp ráp hệ sinh thái AI mà không cần viết code</p>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-card reveal">
+          <div class="tech-card-inner">
+            <div class="tech-icon bg-blue text-white">1</div>
+            <h3>Tầng Lưu Trữ (Data)</h3>
+            <h4 class="text-blue">NotebookLM</h4>
+            <p>Thiết lập cơ sở dữ liệu tĩnh, đảm bảo neo dữ liệu chính xác và loại bỏ triệt để hiện tượng bịa đặt thông tin (Hallucination).</p>
+          </div>
+        </div>
+        <div class="tech-card reveal delay-1">
+          <div class="tech-card-inner">
+            <div class="tech-icon bg-orange text-white">2</div>
+            <h3>Tầng Nhận Thức (Logic)</h3>
+            <h4 class="text-orange">Google Gemini</h4>
+            <p>Nhân xử lý logic trung tâm. Thiết lập Prompt (System Instructions) tuân thủ chặt chẽ Khung 6 trụ cột thiết kế AI Agent.</p>
+          </div>
+        </div>
+        <div class="tech-card reveal delay-2">
+          <div class="tech-card-inner">
+            <div class="tech-icon bg-teal text-white">3</div>
+            <h3>Tầng Vận Hành (Workflow)</h3>
+            <h4 class="text-teal">n8n</h4>
+            <p>Hệ thần kinh tự động hóa. Kết nối API, kéo/đẩy dữ liệu giữa người dùng, Gemini và các ứng dụng bên thứ 3 (Telegram, Sheets...).</p>
+          </div>
+        </div>
+        <div class="tech-card reveal delay-3">
+          <div class="tech-card-inner">
+            <div class="tech-icon bg-purple text-white">4</div>
+            <h3>Tầng Giao Diện (UI)</h3>
+            <h4 class="text-purple">Antigravity</h4>
+            <p>Ra lệnh bằng ngôn ngữ tự nhiên để sinh mã nguồn, tự động tạo ra một Website/Mobile App hoàn chỉnh che giấu sự phức tạp hệ thống.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tracks Section -->
+  <section class="tracks section-padding" id="tracks">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Các Phân Ban Dự Thi (Tracks)</h2>
+        <p>Lựa chọn một lĩnh vực để kiến tạo giá trị cho trường học và cộng đồng</p>
+      </div>
+      <div class="tracks-container">
+        <div class="track-item reveal">
+          <div class="track-icon">🏫</div>
+          <div class="track-content">
+            <h3>AI for Smart Campus</h3>
+            <p>Nâng tầm trải nghiệm học đường với các Trợ lý AI cố vấn học tập, hệ thống hỏi đáp quy chế, hoặc tự động hóa tư vấn tuyển sinh.</p>
+          </div>
+        </div>
+        <div class="track-item reveal delay-1">
+          <div class="track-icon">🏞️</div>
+          <div class="track-content">
+            <h3>AI for Tourism</h3>
+            <p>Các Tác nhân AI hỗ trợ quảng bá, số hóa di sản và xây dựng mô hình trải nghiệm du lịch sinh thái đặc thù tại Đắk Lắk.</p>
+          </div>
+        </div>
+        <div class="track-item reveal delay-2">
+          <div class="track-icon">🌱</div>
+          <div class="track-content">
+            <h3>AI for Agriculture</h3>
+            <p>Trợ lý số cung cấp kiến thức, cảnh báo dịch bệnh, quản lý dữ liệu và tối ưu hóa quy trình sản xuất nông nghiệp thông minh.</p>
+          </div>
+        </div>
+        <div class="track-item reveal delay-3">
+          <div class="track-icon">🏥</div>
+          <div class="track-content">
+            <h3>Healthcare & Community</h3>
+            <p>Ứng dụng AI đột phá hỗ trợ quy trình hành chính công, nghiệp vụ điều dưỡng và chăm sóc sức khỏe cộng đồng hiệu quả.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap Section -->
+  <section class="roadmap section-padding bg-light" id="roadmap">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Lộ Trình Triển Khai</h2>
+        <p>Hành trình 5 tuần rèn luyện để trở thành Kỹ sư ứng dụng thực chiến</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Tuần 1</div>
+            <h3>Phát Động & Đăng Ký</h3>
+            <p>Công bố thể lệ, mở cổng đăng ký trực tuyến. Khuyến khích lập đội liên ngành (3-5 thành viên) theo mô hình "Startup công nghệ".</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot highlight"></div>
+          <div class="timeline-content">
+            <div class="timeline-date highlight-text">Tuần 2-3</div>
+            <h3>Bootcamp Huấn Luyện</h3>
+            <p>Tham gia 3 chuyên đề bắt buộc với các Master Templates có sẵn: <br>
+              <strong>CĐ1:</strong> Não bộ & Trí nhớ (NotebookLM + Gemini).<br>
+              <strong>CĐ2:</strong> Hệ thần kinh (n8n API & Automation).<br>
+              <strong>CĐ3:</strong> Thể xác & Tự vệ (Antigravity UI & Red-Teaming).
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Tuần 4</div>
+            <h3>Vòng Sơ Khảo</h3>
+            <p>Nộp hồ sơ trực tuyến: Slide Pitch Deck, Bản thiết kế System Instructions và Video Live Demo vận hành. Hội đồng chọn Top 10 đội xuất sắc nhất.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot final"></div>
+          <div class="timeline-content">
+            <div class="timeline-date final-text">Tuần 5</div>
+            <h3>Chung Kết & Demo Day</h3>
+            <p>Sự kiện trực tiếp quy mô lớn. Thuyết trình Pitching, <strong>Live Demo màn hình kép</strong> (UI & Luồng n8n) và đối mặt phần thi <strong>Phòng vệ Red-Teaming</strong> từ Ban Giám khảo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Documents Section -->
+  <section class="documents section-padding" id="documents">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Tài Liệu Cuộc Thi</h2>
+        <p>Các văn bản, kế hoạch và biểu mẫu chính thức của Ban Tổ Chức</p>
+      </div>
+      <div class="about-grid">
+        <a href="tl1-ke-hoach.html" class="about-card reveal" style="text-decoration: none;">
+          <div class="card-icon bg-blue-light text-blue">📄</div>
+          <h3>Kế Hoạch Tổ Chức</h3>
+          <p>Bản kế hoạch chi tiết về nội dung, thể lệ và lộ trình cuộc thi AI Innovation Challenge 2027.</p>
+        </a>
+        <a href="tl2-rubric.html" class="about-card reveal delay-1" style="text-decoration: none;">
+          <div class="card-icon bg-orange-light text-orange">📊</div>
+          <h3>Khung Tiêu Chí Đánh Giá</h3>
+          <p>Bảng tiêu chí (Rubric) chi tiết về cách chấm điểm các sản phẩm AI qua 4 tầng kiến trúc.</p>
+        </a>
+        <a href="tl3-demoday.html" class="about-card reveal delay-2" style="text-decoration: none;">
+          <div class="card-icon bg-teal-light text-teal">🎭</div>
+          <h3>Kịch Bản Demo Day</h3>
+          <p>Kịch bản tổ chức Vòng chung kết, thành phần khách mời và thể lệ phần thi Red-Teaming.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / Register Section -->
+  <section class="register section-padding" id="register">
+    <div class="register-bg"></div>
+    <div class="container register-container">
+      <div class="register-card glass-card reveal">
+        <h2>Sẵn Sàng Kiến Tạo?</h2>
+        <p>Tham gia cuộc thi, làm chủ công nghệ AI và giành tổng giải thưởng lên đến <strong>8.500.000 VNĐ</strong>!</p>
+        <form class="register-form" id="registerForm">
+          <div class="form-group">
+            <label for="teamName">Tên Đội Thi</label>
+            <input type="text" id="teamName" placeholder="Ví dụ: AI Pioneer" required>
+          </div>
+          <div class="form-group">
+            <label for="teamEmail">Email Đội Trưởng</label>
+            <input type="email" id="teamEmail" placeholder="email@uda.edu.vn" required>
+          </div>
+          <div class="form-group">
+            <label for="trackSelect">Phân Ban Dự Thi</label>
+            <select id="trackSelect" required>
+              <option value="" disabled selected>Chọn phân ban...</option>
+              <option value="campus">AI for Smart Campus</option>
+              <option value="tourism">AI for Tourism</option>
+              <option value="agriculture">AI for Agriculture</option>
+              <option value="healthcare">Healthcare & Community</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-large btn-block">Gửi Đăng Ký</button>
+        </form>
+        <div id="formSuccess" class="form-success hidden">
+          <div class="success-icon">✅</div>
+          <h3>Đăng ký thành công!</h3>
+          <p>Ban tổ chức sẽ liên hệ qua email của đội trưởng trong thời gian sớm nhất để cung cấp tài liệu Bootcamp.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-col">
+        <h3>UDA AI <span>Challenge</span></h3>
+        <p>Sân chơi công nghệ thực chiến, rèn luyện tư duy phản biện và năng lực số hóa giải quyết vấn đề địa phương.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Đơn vị tổ chức</h4>
+        <p>Trường Đại học Đông Á<br>Phân hiệu Đắk Lắk<br>Khoa Công nghệ Thông tin</p>
+      </div>
+      <div class="footer-col">
+        <h4>Liên Hệ</h4>
+        <p>Thường trực BTC: Khoa CNTT<br>Email: btc.aichallenge@uda.edu.vn</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2027 UDA AI Innovation Challenge. Thiết kế giao diện sáng sủa và tối ưu cho Sinh viên.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
